@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - name: Print Hello Message
+    - name: Print Hello Message in testing
       run: echo "Hello World from testing job"
 
 
@@ -19,7 +19,8 @@ jobs:
 
   deploying:
     runs-on: ubuntu-latest
+    needs: [testing]
     
     steps:
-    - name: Print Hello Message
+    - name: Print Hello Message in deploy
       run: echo "Hello World from deploy job"
