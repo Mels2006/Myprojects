@@ -5,7 +5,7 @@ name: My-GithubActions-Basics
 on: 
   push:
     branches:
-      - master
+      - main
 jobs:
   testing:
     runs-on: ubuntu-latest
